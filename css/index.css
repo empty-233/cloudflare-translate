@@ -25,3 +25,8 @@
   margin-left: -25px;
   display: none;
 }
+.md-translate-btn {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: center;
+}

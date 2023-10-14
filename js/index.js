@@ -74,6 +74,10 @@ $(document).ready(function () {
       ajax();
     }
   });
+
+  $(".md-translate-btn").click(() => {
+    ajax();
+  });
 });
 
 const autoExpand = (element) => {
