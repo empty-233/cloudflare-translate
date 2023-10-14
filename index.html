@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cloudflare translate</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="https://developers.cloudflare.com/workers-ai/models/translation/"
+                >cloudflare workers</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="alert alert-warning" role="alert">
+      由于<a
+        class="link-warning"
+        href="https://developers.cloudflare.com/workers-ai/platform/limits"
+        >Workers AI限制</a
+      >，翻译输出最大为256 token
+    </div>
+    <div class="main container-md">
+      <div class="container">
+        <div class="row">
+          <div class="col-md source-language">
+            <div class="source-language-btn">
+              <button type="button" class="btn btn-info" id="source-english">
+                英语
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-info"
+                id="source-chinese"
+              >
+                中文
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-info"
+                id="source-french"
+              >
+                法语
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-info"
+                id="source-spanish"
+              >
+                西班牙语
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-info"
+                id="source-arabic"
+              >
+                阿拉伯
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-info"
+                id="source-russian"
+              >
+                俄语
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-info"
+                id="source-german"
+              >
+                德语
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-info"
+                id="source-japanese"
+              >
+                日语
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-info"
+                id="source-portuguese"
+              >
+                葡萄牙语
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-info"
+                id="source-hindi"
+              >
+                印地语
+              </button>
+            </div>
+            <div class="source-language-div">
+              <textarea
+                name="source-language-text"
+                class="language-text"
+                id="source-language-text"
+                oninput="autoExpand(this)"
+                maxlength="256"
+                placeholder="按下CTRL+Enter翻译..."
+              ></textarea>
+              <div class="limit-text">0/256</div>
+            </div>
+          </div>
+          <div class="col-md target-language">
+            <div class="target-language-btn">
+              <button type="button" class="btn btn-info" id="target-chinese">
+                中文
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-info"
+                id="target-english"
+              >
+                英语
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-info"
+                id="target-french"
+              >
+                法语
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-info"
+                id="target-spanish"
+              >
+                西班牙语
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-info"
+                id="target-arabic"
+              >
+                阿拉伯
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-info"
+                id="target-russian"
+              >
+                俄语
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-info"
+                id="target-german"
+              >
+                德语
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-info"
+                id="target-japanese"
+              >
+                日语
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-info"
+                id="target-portuguese"
+              >
+                葡萄牙语
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-info"
+                id="target-hindi"
+              >
+                印地语
+              </button>
+            </div>
+            <div class="target-language-div">
+              <textarea
+                name="target-language-text"
+                class="language-text"
+                id="target-language-text"
+                oninput="autoExpand(this)"
+                disabled
+              ></textarea>
+              <div class="spinner-border text-secondary spinner" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/jquery-3.7.1.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/index.js"></script>
+</html>
