@@ -18,6 +18,8 @@ $(document).ready(function () {
   };
 
   const ajax = () => {
+    const text = source_language_text.val().trim();
+    if (!text) return;
     loaderDisplay(true);
     $.ajax({
       url: "https://translate-api.kongwu.top",
@@ -25,7 +27,7 @@ $(document).ready(function () {
       contentType: "application/json",
       dataType: "json",
       data: JSON.stringify({
-        text: source_language_text.val().trim(),
+        text,
         source_lang: $(".source-language-btn>.btn-info")
           .attr("id")
           .replace("source-", ""),
