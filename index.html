@@ -49,78 +49,73 @@
       <div class="container">
         <div class="row">
           <div class="col-md source-language">
-            <div class="source-language-btn">
-              <button type="button" class="btn btn-info" id="source-english">
-                英语
-              </button>
+            <div class="dropdown source-language-btn">
               <button
+                class="btn btn-outline-secondary dropdown-toggle"
                 type="button"
-                class="btn btn-outline-info"
-                id="source-chinese"
+                id="dropdownMenu2"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
-                中文
+                <span class="dropdown-text">英语</span>
               </button>
-              <button
-                type="button"
-                class="btn btn-outline-info"
-                id="source-french"
-              >
-                法语
-              </button>
-              <button
-                type="button"
-                class="btn btn-outline-info"
-                id="source-spanish"
-              >
-                西班牙语
-              </button>
-              <button
-                type="button"
-                class="btn btn-outline-info"
-                id="source-arabic"
-              >
-                阿拉伯
-              </button>
-              <button
-                type="button"
-                class="btn btn-outline-info"
-                id="source-russian"
-              >
-                俄语
-              </button>
-              <button
-                type="button"
-                class="btn btn-outline-info"
-                id="source-german"
-              >
-                德语
-              </button>
-              <button
-                type="button"
-                class="btn btn-outline-info"
-                id="source-japanese"
-              >
-                日语
-              </button>
-              <button
-                type="button"
-                class="btn btn-outline-info"
-                id="source-portuguese"
-              >
-                葡萄牙语
-              </button>
-              <button
-                type="button"
-                class="btn btn-outline-info"
-                id="source-hindi"
-              >
-                印地语
-              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li>
+                  <button class="dropdown-item active" type="button" id="source-english">
+                    英语
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button" id="source-chinese">
+                    中文
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button" id="source-french">
+                    法语
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button" id="source-spanish">
+                    西班牙语
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button" id="source-arabic">
+                    阿拉伯
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button" id="source-russian">
+                    俄语
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button" id="source-german">
+                    德语
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button" id="source-japanese">
+                    日语
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button" id="source-portuguese">
+                    葡萄牙语
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button" id="source-hindi">
+                    印地语
+                  </button>
+                </li>
+              </ul>
             </div>
             <div class="source-language-div">
               <textarea
                 name="source-language-text"
-                class="language-text"
+                class="language-text textarea-text"
                 id="source-language-text"
                 oninput="autoExpand(this)"
                 maxlength="256"
@@ -130,78 +125,73 @@
             </div>
           </div>
           <div class="col-md target-language">
-            <div class="target-language-btn">
-              <button type="button" class="btn btn-info" id="target-chinese">
-                中文
-              </button>
+            <div class="dropdown target-language-btn">
               <button
+                class="btn btn-outline-secondary dropdown-toggle"
                 type="button"
-                class="btn btn-outline-info"
-                id="target-english"
+                id="dropdownMenu2"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
               >
-                英语
+                <span class="dropdown-text">中文</span>
               </button>
-              <button
-                type="button"
-                class="btn btn-outline-info"
-                id="target-french"
-              >
-                法语
-              </button>
-              <button
-                type="button"
-                class="btn btn-outline-info"
-                id="target-spanish"
-              >
-                西班牙语
-              </button>
-              <button
-                type="button"
-                class="btn btn-outline-info"
-                id="target-arabic"
-              >
-                阿拉伯
-              </button>
-              <button
-                type="button"
-                class="btn btn-outline-info"
-                id="target-russian"
-              >
-                俄语
-              </button>
-              <button
-                type="button"
-                class="btn btn-outline-info"
-                id="target-german"
-              >
-                德语
-              </button>
-              <button
-                type="button"
-                class="btn btn-outline-info"
-                id="target-japanese"
-              >
-                日语
-              </button>
-              <button
-                type="button"
-                class="btn btn-outline-info"
-                id="target-portuguese"
-              >
-                葡萄牙语
-              </button>
-              <button
-                type="button"
-                class="btn btn-outline-info"
-                id="target-hindi"
-              >
-                印地语
-              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <li>
+                  <button class="dropdown-item active" type="button" id="target-chinese">
+                    中文
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button" id="target-english">
+                    英语
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button" id="target-french">
+                    法语
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button" id="target-spanish">
+                    西班牙语
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button" id="target-arabic">
+                    阿拉伯
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button" id="target-russian">
+                    俄语
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button" id="target-german">
+                    德语
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button" id="target-japanese">
+                    日语
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button" id="target-portuguese">
+                    葡萄牙语
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item" type="button" id="target-hindi">
+                    印地语
+                  </button>
+                </li>
+              </ul>
             </div>
             <div class="target-language-div">
               <textarea
                 name="target-language-text"
-                class="language-text"
+                class="language-text textarea-text"
                 id="target-language-text"
                 oninput="autoExpand(this)"
                 disabled
@@ -216,6 +206,6 @@
     </div>
   </body>
   <script src="./js/jquery-3.7.1.min.js"></script>
-  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
   <script src="./js/index.js"></script>
 </html>

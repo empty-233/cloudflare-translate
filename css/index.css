@@ -2,21 +2,26 @@
   padding: 0;
   margin: 0;
 }
+
 .main {
   margin-top: 20px;
 }
+
 .language-text {
   overflow: hidden;
   width: 100%;
   height: 300px;
   resize: none;
 }
+
 .limit-text {
   text-align: right;
 }
+
 .target-language-div {
   position: relative;
 }
+
 .spinner {
   position: absolute;
   left: 50%;
@@ -25,8 +30,24 @@
   margin-left: -25px;
   display: none;
 }
+
 .md-translate-btn {
   display: flex;
   margin-bottom: 20px;
   justify-content: center;
+}
+
+.dropdown {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.textarea-text {
+  padding: 10px;
+  border-radius: 10px;
+  /* outline: none */
+}
+
+.textarea-text::selection {
+  border: 2px solid #e74c3c; /* 选中文本的边框颜色 */
 }

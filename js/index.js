@@ -1,10 +1,8 @@
 $(document).ready(function () {
-  $(".source-language-btn>.btn").on("click", function () {
-    $(".source-language-btn>.btn").addClass("btn-outline-info");
-    $(".source-language-btn>.btn").removeClass("btn-info");
-
-    $(this).removeClass("btn-outline-info");
-    $(this).addClass("btn-info");
+  $(".source-language-btn .dropdown-menu button").on("click", function () {
+    $(".source-language-btn .dropdown-menu button").removeClass("active");
+    $(this).addClass("active");
+    $(".source-language-btn .dropdown-text").text($(this).text());
   });
 
   const source_language_text = $("#source-language-text");
@@ -28,10 +26,12 @@ $(document).ready(function () {
       dataType: "json",
       data: JSON.stringify({
         text,
-        source_lang: $(".source-language-btn>.btn-info")
+        // source_lang: $(".source-language-btn>.btn-info")
+        source_lang: $(".source-language-btn .dropdown-menu button.active")
           .attr("id")
           .replace("source-", ""),
-        target_lang: $(".target-language-btn>.btn-info")
+        // target_lang: $(".target-language-btn>.btn-info")
+        target_lang: $(".target-language-btn .dropdown-menu button.active")
           .attr("id")
           .replace("target-", ""),
       }),
@@ -48,13 +48,10 @@ $(document).ready(function () {
     });
   };
 
-  $(".target-language-btn>.btn").on("click", function () {
-    $(".target-language-btn>.btn").addClass("btn-outline-info");
-    $(".target-language-btn>.btn").removeClass("btn-info");
-
-    $(this).removeClass("btn-outline-info");
-    $(this).addClass("btn-info");
-
+  $(".target-language-btn .dropdown-menu button").on("click", function () {
+    $(".target-language-btn .dropdown-menu button").removeClass("active");
+    $(this).addClass("active");
+    $(".target-language-btn .dropdown-text").text($(this).text());
     ajax();
   });
 
