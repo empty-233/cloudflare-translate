@@ -33,12 +33,13 @@
 
 .md-translate-btn {
   display: flex;
-  margin-bottom: 20px;
+  margin-top: 30px;
+  margin-bottom: 10px;
   justify-content: center;
 }
 
 .dropdown {
-  margin-bottom: 20px;
+  margin: 20px 0;
   text-align: center;
 }
 
@@ -48,6 +49,7 @@
   /* outline: none */
 }
 
-.textarea-text::selection {
-  border: 2px solid #e74c3c; /* 选中文本的边框颜色 */
+.translate-type {
+  display: flex;
+  justify-content: center;
 }
