@@ -73,7 +73,7 @@ $(document).ready(function () {
   const api = (text) => {
     return new Promise((resolve, reject) => {
       $.ajax({
-        url: "https://translate-api.kongwu.top",
+        url: "https://translate.api.kongwu.top",
         method: "POST",
         contentType: "application/json",
         dataType: "json",
